@@ -1,8 +1,9 @@
 #first, import tkinker liberary, that will enable us build our GUI.
-from tkinter import *
-    
+#STEP 1: IMPORT LIBRARY
+from tkinter import *   
 from tkinter import messagebox
 
+#STEP 2: INTERFACE SETUP
 game = Tk()
 game.title("Tic Tac Toe")
 game.geometry("1100x600+0+0")
@@ -29,7 +30,7 @@ RightFrame1.grid(row=0, column=0)
 RightFrame2 = Frame(RightFrame, bd=10, width =560, height=500, pady=2, padx=10, bg="Cadet Blue")
 RightFrame2.grid(row=1, column=0)
 
-
+#STEP 3: VARIABLE DEFINITION
 PlayerX=IntVar()
 PlayerO=IntVar()
 Turn = StringVar()
@@ -37,6 +38,7 @@ Turn = StringVar()
 global winner
 winner = None
 
+#STEP 4: FUNCTION DEFINITION
 def clear_score():
     
     PlayerX.set(0)
@@ -267,7 +269,7 @@ def NewGame():
     clear_score()
     
    
-                    
+#STEP 5: BUTTONS/LABELS SETUP                    
 lblPlayerX =Label(RightFrame1, font=('arial',22,'bold'), text="Player X:",padx=10, bg="Cadet Blue")
 lblPlayerX.grid(row=0, column=0,sticky=W)
 txtPlayerX=Entry(RightFrame1, font=('arial',22,'bold'),bd=2,fg="black",textvariable=PlayerX, width=7,
